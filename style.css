@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+}
+
+/* Header */
+
+header {
+    background-color: #d92332;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* Hero Section */
+
+.hero {
+    background: linear-gradient(135deg, #d92332, #ff795c);
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.hero h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.search-box {
+    background: white;
+    padding: 20px;
+    margin: 30px auto 0;
+    max-width: 950px;
+    display: flex;
+    gap: 10px;
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 150px;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Buttons */
+
+button {
+    background-color: #d92332;
+    color: white;
+    padding: 14px 22px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #a81725;
+}
+
+/* Bus Results */
+
+.results {
+    padding: 40px 8%;
+}
+
+.results h2 {
+    margin-bottom: 20px;
+}
+
+.bus-card {
+    background: white;
+    padding: 22px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.bus-card h3 {
+    color: #d92332;
+    margin-bottom: 10px;
+}
+
+/* Seat Selection */
+
+.seat-section {
+    display: none;
+    padding: 40px 8%;
+    text-align: center;
+}
+
+.seat-info {
+    margin: 20px;
+}
+
+.seat-container {
+    display: grid;
+    grid-template-columns: repeat(4, 55px);
+    gap: 12px;
+    justify-content: center;
+    margin: 30px auto;
+}
+
+.seat {
+    background: #b8e6c3;
+    padding: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.seat.selected {
+    background: #e74c3c;
+    color: white;
+}
+
+.seat.booked {
+    background: #999;
+    cursor: not-allowed;
+    color: white;
+}
+
+#total {
+    margin: 20px;
+}
+
+/* Footer */
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 5px;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .bus-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

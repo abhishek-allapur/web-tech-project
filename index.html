@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Booking Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🚌 BusGo</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#search">Book Tickets</a>
+            <a href="#about">About Us</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Book Your Bus Tickets</h2>
+        <p>Travel anywhere, anytime with BusGo!</p>
+
+        <div class="search-box" id="search">
+
+            <input type="text" id="from"
+                   placeholder="From City">
+
+            <input type="text" id="to"
+                   placeholder="To City">
+
+            <input type="date" id="date">
+
+            <button onclick="searchBuses()">
+                Search Buses
+            </button>
+
+        </div>
+    </section>
+
+    <section class="results">
+        <h2>Available Buses</h2>
+        <div id="busList">
+            <p>Search for buses to see available options.</p>
+        </div>
+    </section>
+
+    <section class="seat-section" id="seatSection">
+        <h2>Select Your Seats</h2>
+
+        <div class="seat-info">
+            <span>🟩 Available</span>
+            <span>🟥 Selected</span>
+        </div>
+
+        <div class="seat-container" id="seats"></div>
+
+        <h3 id="total">Total: ₹0</h3>
+
+        <button onclick="bookTicket()">
+            Confirm Booking
+        </button>
+    </section>
+
+    <footer id="about">
+        <p>© 2026 BusGo. All Rights Reserved.</p>
+        <p>Your Journey, Our Responsibility.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
